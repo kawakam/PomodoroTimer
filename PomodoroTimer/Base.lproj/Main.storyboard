@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,12 +17,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.61140806780000001" green="0.95814631449999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dm2-CD-nWx">
+                                <rect key="frame" x="16" y="298" width="343" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="cBo-Gf-dms"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aeo-Vx-NB4">
+                                <rect key="frame" x="16" y="376.5" width="343" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="l0u-DL-kdN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzV-pD-nJN">
+                                <rect key="frame" x="16" y="404.5" width="343" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="bmA-vG-A7P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Aeo-Vx-NB4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0Qx-mJ-MNO"/>
+                            <constraint firstItem="Aeo-Vx-NB4" firstAttribute="top" secondItem="Dm2-CD-nWx" secondAttribute="bottom" constant="8" id="EMr-Xg-h4C"/>
+                            <constraint firstItem="Dm2-CD-nWx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Pdl-v3-eF5"/>
+                            <constraint firstItem="fzV-pD-nJN" firstAttribute="top" secondItem="Aeo-Vx-NB4" secondAttribute="bottom" constant="8" id="cQH-OQ-Lm6"/>
+                            <constraint firstItem="fzV-pD-nJN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jxL-9A-4L9"/>
+                            <constraint firstItem="Dm2-CD-nWx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qCp-Kw-h60"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Aeo-Vx-NB4" secondAttribute="trailing" id="uW1-Td-EUG"/>
+                            <constraint firstItem="Dm2-CD-nWx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vPs-t3-iX2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dm2-CD-nWx" secondAttribute="trailing" id="yva-vh-icq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fzV-pD-nJN" secondAttribute="trailing" id="zKm-dk-Gia"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="Aeo-Vx-NB4" id="yGk-MV-P6z"/>
+                        <outlet property="meridiemLabel" destination="fzV-pD-nJN" id="CPZ-Mh-wfr"/>
+                        <outlet property="timeLabel" destination="Dm2-CD-nWx" id="Jo1-KD-c4N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.5" y="437.5"/>
         </scene>
     </scenes>
 </document>

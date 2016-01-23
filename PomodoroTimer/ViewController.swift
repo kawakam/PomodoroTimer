@@ -9,10 +9,50 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var meridiemLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        update()
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "update", userInfo: nil, repeats: true)
+    }
+    
+    func update() {
+        let now = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        //        let flag = NSCalendarUnit.Year   |
+        //                  NSCalendarUnit.Month   |
+        //                  NSCalendarUnit.Day     |
+        //                  NSCalendarUnit.Hour    |
+        //                  NSCalendarUnit.Minute  |
+        //                  NSCalendarUnit.Second
+        
+        //        let flag: Set = [NSCalendarUnit.Year,
+        //                    NSCalendarUnit.Month,
+        //                    NSCalendarUnit.Day,
+        //                    NSCalendarUnit.Hour,
+        //                    NSCalendarUnit.Minute,
+        //                    NSCalendarUnit.Second]
+        
+        let components = calendar.components([.Year, .Month, .Day, .Hour, .Hour, .Minute, .Second], fromDate: now)
+        
+        let year = components.year
+        let month = components.month
+        let day = components.day
+        let hour = components.hour
+        let minute = components.minute
+        let second = components.second
+        
+        timeLabel.text = String(String(format: "%02d:%02d:%02d", hour, minute, second))
+        dateLabel.text = String(String(format: "%04d:%02d:%02d", year, month, day))
+        
+        if hour < 12 {
+            meridiemLabel.text = "AM"
+        } else {
+            meridiemLabel.text = "PM"
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,6 +14,7 @@
 		55090F981C4104A700470A32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55090F961C4104A700470A32 /* LaunchScreen.storyboard */; };
 		55090FA31C4104A700470A32 /* PomodoroTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55090FA21C4104A700470A32 /* PomodoroTimerTests.swift */; };
 		55090FAE1C4104A700470A32 /* PomodoroTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55090FAD1C4104A700470A32 /* PomodoroTimerUITests.swift */; };
+		556EEB841C5C8DE900345274 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EEB831C5C8DE900345274 /* ClockView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		55090FA91C4104A700470A32 /* PomodoroTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomodoroTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55090FAD1C4104A700470A32 /* PomodoroTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTimerUITests.swift; sourceTree = "<group>"; };
 		55090FAF1C4104A700470A32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		556EEB831C5C8DE900345274 /* ClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				55090F8D1C4104A700470A32 /* AppDelegate.swift */,
 				55090F8F1C4104A700470A32 /* ViewController.swift */,
+				556EEB831C5C8DE900345274 /* ClockView.swift */,
 				55090F911C4104A700470A32 /* Main.storyboard */,
 				55090F941C4104A700470A32 /* Assets.xcassets */,
 				55090F961C4104A700470A32 /* LaunchScreen.storyboard */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55090F901C4104A700470A32 /* ViewController.swift in Sources */,
+				556EEB841C5C8DE900345274 /* ClockView.swift in Sources */,
 				55090F8E1C4104A700470A32 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +486,7 @@
 				55090FB41C4104A700470A32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55090FB51C4104A700470A32 /* Build configuration list for PBXNativeTarget "PomodoroTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +495,7 @@
 				55090FB71C4104A700470A32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55090FB81C4104A700470A32 /* Build configuration list for PBXNativeTarget "PomodoroTimerUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				55090FBA1C4104A700470A32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

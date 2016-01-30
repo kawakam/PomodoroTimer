@@ -13,8 +13,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var meridiemLabel: UILabel!
 
+    let clockView = ClockView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        clockView.frame.size = CGSize(width: 300, height: 300)
+        clockView.center = view.center
+        clockView.backgroundColor = UIColor.clearColor()
+        view.addSubview(clockView)
+        
         update()
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "update", userInfo: nil, repeats: true)
     }
@@ -53,6 +61,12 @@ class ViewController: UIViewController {
         } else {
             meridiemLabel.text = "PM"
         }
+        
+        clockView.hour = hour
+        clockView.minute = minute
+        clockView.second = second
+        
+        clockView.setNeedsDisplay()
     }
 
     override func didReceiveMemoryWarning() {
